@@ -209,7 +209,7 @@ public class ClientPanel extends JPanel implements ClientChangeListener {
         // Example output: [15:21:40 -0400] Person: Some message...
         
         dateFormatter.format("[" + dateFormatter.format(msg.getTimestamp()) + "]");
-        
+
         String newText = String.format(" %s: %s%n", msg.getSender(),
                 msg.getContent());
         this.chatArea.append(newText);
