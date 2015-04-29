@@ -23,6 +23,7 @@ import javax.swing.SwingUtilities;
 import edu.cmu.cs.cs214.rec15.client.ChatClient;
 import edu.cmu.cs.cs214.rec15.client.ClientChangeListener;
 import edu.cmu.cs.cs214.rec15.server.Message;
+import java.text.SimpleDateFormat;
 
 /**
  * ClientPanel a GUI for the ChatClient interface
@@ -206,6 +207,8 @@ public class ClientPanel extends JPanel implements ClientChangeListener {
 
         // TODO: Make the server show the timestamp of the received message.
         // Example output: [15:21:40 -0400] Person: Some message...
+        
+        dateFormatter.format("[" + dateFormatter.format(msg.getTimestamp()) + "]");
 
         String newText = String.format(" %s: %s%n", msg.getSender(),
                 msg.getContent());
