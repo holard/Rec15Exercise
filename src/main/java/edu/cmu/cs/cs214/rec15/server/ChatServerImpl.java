@@ -20,7 +20,7 @@ import edu.cmu.cs.cs214.rec15.util.Log;
  *
  */
 public class ChatServerImpl extends Thread implements ChatServer {
-    private static final int DEFAULT_PORT = 15214;
+    private static final int DEFAULT_PORT = 15032;
     private static final String TAG = "SERVER";
     private static final int POOL_SIZE = Runtime.getRuntime()
             .availableProcessors();

@@ -97,6 +97,15 @@ public class ChatClientImpl extends Thread implements ChatClient {
         }
 
         this.start();
+        
+        Message msg = new Message(getUsername() + " has joined the server.", "SERVER");
+        try {
+			out.writeObject(msg);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        
         notifyListenersConnectedToServer(host, port);
     }
 
